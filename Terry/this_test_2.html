@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <title>this test 2</title>
 <script>
-    var obj = {};
-    obj.name = 'Terry';
+    var obj = {};               //宣告一個空物件
+    obj.name = 'Terry';         //給物件設置屬性
     obj.age = 25 ;
-    obj.data = function(){
+    obj.data = function(){      //給物件設置方法
         return 'this.name: ' + this.name + ', this.age: ' + this.age;
     };
-    //這時候他的this 就指向了 obj 這個對象, 所以我可以alert 出來 obj的屬性
-    alert( obj.name );
-    alert( obj.age );
-    alert( obj.data() );
+    //這時候他的this 就指向了 obj 這個對象, 所以我可以alert 的出來 obj的屬性
+    alert( obj.name );          //Terry
+    alert( obj.age );           //25
+    alert( obj.data() );        //this.name: Terry, this.age: 25
 </script>
 </head>
 <body>
