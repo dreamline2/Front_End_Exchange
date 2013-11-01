@@ -8,7 +8,7 @@
         $(document).on('ready', function(){
             $('div').hover( 
                 function(){                             //當滑鼠移入時, 觸發的事件
-                    $(this).css('background','black');  //$(this)在這邊表示:當前的div
+                    $(this).css('background','black');  //$(this)在這邊表示:事件觸發時, 當前的div
                 },
                 function(){                             //當滑鼠移出時, 觸發的事件
                     $(this).css('background','red');
@@ -16,7 +16,7 @@
         });
     </script>
     <style>
-    div{ width:300px; height:300px; background:red; border:1px solid white; margin:0 auto; }
+        div{ width:300px; height:300px; background:red; border:1px solid white; margin:0 auto; }
     </style>
 </head>
 <body>
