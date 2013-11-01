@@ -7,10 +7,10 @@
     <script>
         $(document).on('ready', function(){
             $('div').hover( 
-                function(){
+                function(){                             //當滑鼠移入時, 當前的div時觸發的事件
                     $(this).css('background','black');  //$(this)在這邊表示:當前的div
                 },
-                function(){
+                function(){                             //當滑鼠移出時, 當前的div時觸發的事件
                     $(this).css('background','red');
                 });
         });
