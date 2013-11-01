@@ -1,0 +1,19 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>this test 2</title>
+<script>
+    var obj = {};
+    obj.name = 'Terry';
+    obj.age = 25 ;
+    obj.data = function(){
+        return 'this.name: ' + this.name + ', this.age: ' + this.age;
+    };
+    //這時候他的this 就指向了 obj 這個對象, 所以我可以alert 出來 obj的屬性
+    alert( obj.data() );
+</script>
+</head>
+<body>
+</body>
+</html>
