@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>simple_tab_test</title>
+<style>
+#content div{ background:red; width:800px; height:200px; border:1px solid black; display:none; }
+#content div:nth-of-type(1){ background:yellow; }
+#content div:nth-of-type(2){ background:green; }
+#tab_content input{ width:80px; }
+</style>
+<script>
+    window.onload = function(){
+        var tab_content = document.getElementById('tab_content');
+        var content     = document.getElementById('content');
+        var input_tag   = tab_content.getElementsByTagName('input');
+        var tab_div     = content.getElementsByTagName('div');
+        tab_div[0].style.display = 'block';
+        for(var i=0; i<input_tag.length; i++){
+            input_tag[i].index = i;
+            input_tag[i].onclick = function(){
+                for(var i=0; i<tab_div.length; i++){
+                    tab_div[i].style.display = 'none';
+                }
+                tab_div[this.index].style.display = 'block';
+            };
+        }
+    };
+</script>
+</head>
+<body>
+    <div id="tab_content">
+        <input type="button" value="123">
+        <input type="button" value="456">
+        <input type="button" value="789">
+    </div>
+    <div id="content">
+        <div>123</div>
+        <div>456</div>
+        <div>789</div>
+    </div>
+</body>
+</html>
