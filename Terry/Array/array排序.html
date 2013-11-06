@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array排序</title>
+    <script>
+    /*
+    var arr = ['float', 'widht', 'alpha', 'zoom', 'left'];
+    arr.sort();
+    alert(arr);
+    */
+    var arr = [9,33,22,47,31,1,61,55];
+    //arr.sort();     //只認識字串
+    //alert(arr);
+    
+    //要幫助他認識數字
+    arr.sort(function(n1, n2){
+    /*
+        if(n1 < n2)
+        {
+            return -1;  //不一定要回傳-1, 只要是負數即可
+        }
+        else if(n1 > n2){
+            return 1;   //不一定要回傳1, 只要是正數即可
+        }
+        else{
+            return 0;
+        }
+    */
+        return n1 - n2;  //偷懶的好辦法
+    });
+    alert(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
