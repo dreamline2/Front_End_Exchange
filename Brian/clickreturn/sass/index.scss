@@ -1,0 +1,86 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "susy";
+
+@mixin size($width,$height){
+	width:$width;
+	height:$height;}
+
+
+body,html{
+	@include box-sizing(border-box);
+	@include size(100%,100%);
+}
+#all{
+	overflow:hidden;
+	@include size(100%,100%);
+	position:relative;
+	#slider_left{
+		z-index: 20;
+		@include size(300px,100%);
+		background: #41DEE7;
+		position: absolute;
+		left:0;
+		ul{
+			@include size(150px,100%);
+			border:5px dotted #fff;
+			margin: 0 auto;
+			li{
+				margin: 0;
+				padding: 0;
+				@include size(150px,150px);
+				border: 2px solid #fff;
+				text-indent: -9999px;
+				overflow: hidden;
+				a{@include size(150px,150px);
+					display: block;
+					background:#98C58D;
+					@include border-radius(50%);}
+
+			}
+		}
+	}
+
+	#slider_right{
+		.pane{
+			@include size(100%,100%);
+			display: block;
+
+		}
+		#pan1{
+			@include size(100%,100%);
+			position:fixed;
+		
+		background:url(../images/s1.jpg) no-repeat center center;
+		
+		text-align:  center;
+		vertical-align: middle;
+		font-family: "helvatic",arial;
+		font-size: 125px;
+		line-height: 500px;
+		color:white	;	
+		
+		
+		}
+		#pan2{@include size(100%,100%);
+		position:fixed;
+		background:url(../images/s2.jpg) no-repeat center center;
+		text-align:  center;
+		vertical-align: middle;
+		font-family: "helvatic",arial;
+		font-size: 125px;
+		line-height: 500px;
+		color:white	;	
+		
+		}
+	}
+
+	.c1{
+		width:0;
+		height:12px;
+		position: fixed;
+		z-index:10;
+		background-color:#CF36A9;
+	}
+
+}

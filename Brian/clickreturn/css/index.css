@@ -1,0 +1,159 @@
+/* line 17, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 10, ../sass/index.scss */
+body, html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 14, ../sass/index.scss */
+#all {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 18, ../sass/index.scss */
+#all #slider_left {
+  z-index: 20;
+  width: 300px;
+  height: 100%;
+  background: #41DEE7;
+  position: absolute;
+  left: 0;
+}
+/* line 24, ../sass/index.scss */
+#all #slider_left ul {
+  width: 150px;
+  height: 100%;
+  border: 5px dotted #fff;
+  margin: 0 auto;
+}
+/* line 28, ../sass/index.scss */
+#all #slider_left ul li {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #fff;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+/* line 35, ../sass/index.scss */
+#all #slider_left ul li a {
+  width: 150px;
+  height: 150px;
+  display: block;
+  background: #98C58D;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 45, ../sass/index.scss */
+#all #slider_right .pane {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* line 50, ../sass/index.scss */
+#all #slider_right #pan1 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url(../images/s1.jpg) no-repeat center center;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "helvatic",arial;
+  font-size: 125px;
+  line-height: 500px;
+  color: white;
+}
+/* line 65, ../sass/index.scss */
+#all #slider_right #pan2 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url(../images/s2.jpg) no-repeat center center;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "helvatic",arial;
+  font-size: 125px;
+  line-height: 500px;
+  color: white;
+}
+/* line 78, ../sass/index.scss */
+#all .c1 {
+  width: 0;
+  height: 12px;
+  position: fixed;
+  z-index: 10;
+  background-color: #CF36A9;
+}
