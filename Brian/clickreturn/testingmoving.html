@@ -1,67 +1,68 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>testingmovingclick</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>testingmovingclick</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body>
-	<div id="all">
-		<div class="c1"></div>
-		<div id="slider_left">
-			<ul class="tab">
-				<li><a href="#pan1">nav1</a></li>
-				<li><a href="#pan2">nav2</a></li>
-			</ul>
-		</div>
-		<div id="slider_right">
-			<div class="pane" id="pan1">testing1
-				</div>
-			<div class="pane" id="pan2">testing2</div>
-		</div>
-	</div>
-	
+    <div id="all">
+        <div class="c1"></div>
+        <div id="slider_left">
+            <ul class="tab">
+                <li><a href="#pan1">nav1</a></li>
+                <li><a href="#pan2">nav2</a></li>
+            </ul>
+        </div>
+        <div id="slider_right">
+            <div class="pane" id="pan1">testing1
+                </div>
+            <div class="pane" id="pan2">testing2</div>
+        </div>
+    </div>
+    
 </body>
 
 <script type="text/javascript">
 $(function(){
 
-	$("#slider_left").hover(
-		function(){
-			$("#slider_left").stop(true,false).animate({
-				width:"300px",
-				left:"0px"
-			},400);
-		},
-		function(){
-			$('#slider_left').stop(true,false).animate({
-				width:"300px",
-				left:"-299px"
-        },500);	}
-    );
-
-	$(".tab a").click(
-		function(){
-			$this = $(this);
-			$(".pane").hide();
-			var pane = $this.attr('href');
-			$(pane).fadeIn(400);
-			return false;
+    $("#slider_left").hover(
+        function(){
+            $("#slider_left").stop(true,false).animate({
+                width:"300px",
+                left:"0px"
+            },400);
+        },
+        function(){
+            $('#slider_left').stop(true,false).animate({
+                width:"300px",
+                left:"-299px"
+            },500);
         }
     );
 
-	$(".tab a").eq(0).click(function (){
+    $(".tab a").click(
+        function(){
+            $this = $(this);
+            $(".pane").hide();
+            var pane = $this.attr('href');
+            $(pane).fadeIn(400);
+            return false;
+        }
+    );
+
+    $(".tab a").eq(0).click(function (){
         $(".c1").animate({width:"100%"},400);
         $(".c1").animate({height:"100%"},500);
         $('.c1').show();
     });
 
-	$(".tab a").eq(1).click(function(){
-		$(".c1").animate({height:"5px"},400);
-		$(".c1").animate({width:"0%"},500);
-		$(".c1").fadeOut(250);
-	});		
+    $(".tab a").eq(1).click(function(){
+        $(".c1").animate({height:"5px"},400);
+        $(".c1").animate({width:"0%"},500);
+        $(".c1").fadeOut(250);
+    });        
 });
 
 </script>
