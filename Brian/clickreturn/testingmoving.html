@@ -27,10 +27,6 @@
 <script type="text/javascript">
 $(function(){
 
-	
-
-	
-
 	$("#slider_left").hover(
 		function(){
 			$("#slider_left").stop(true,false).animate({
@@ -38,14 +34,12 @@ $(function(){
 				left:"0px"
 			},400);
 		},
-
 		function(){
 			$('#slider_left').stop(true,false).animate({
 				width:"300px",
 				left:"-299px"
-			},500);	}
-
-			);
+        },500);	}
+    );
 
 	$(".tab a").click(
 		function(){
@@ -54,32 +48,20 @@ $(function(){
 			var pane = $this.attr('href');
 			$(pane).fadeIn(400);
 			return false;
-		});
+        }
+    );
 
-	$(".tab a").eq(0).click(
-
-	function (){
-			$(".c1").animate({width:"100%"},400);
-			$(".c1").animate({height:"100%"},500);
-
-		});
+	$(".tab a").eq(0).click(function (){
+        $(".c1").animate({width:"100%"},400);
+        $(".c1").animate({height:"100%"},500);
+        $('.c1').show();
+    });
 
 	$(".tab a").eq(1).click(function(){
-
 		$(".c1").animate({height:"5px"},400);
 		$(".c1").animate({width:"0%"},500);
 		$(".c1").fadeOut(250);
-
-
-	});
-
-	
-
-	
-
-		
-
-		
+	});		
 });
 
 </script>
