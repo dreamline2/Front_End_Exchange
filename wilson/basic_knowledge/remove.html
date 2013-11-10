@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移除陣列元素</title>
+</head>
+<body>
+	<script>
+		var a = ['a','b',undefined],
+			b = [];
+		for(var i=0;i<a.length;i++){
+			if(a[i] === undefined) continue;
+			else b.push(a[i]);
+		}
+		console.log(b)
+	</script>
+</body>
+</html>

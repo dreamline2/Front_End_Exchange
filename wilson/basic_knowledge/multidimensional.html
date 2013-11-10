@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二維陣列</title>
+</head>
+<body>
+	<script>
+	//建立空表格
+	var table = new Array(10);
+	for(var i=0;i<table.length;i++){
+		table[i] = new Array(10);
+	}
+	console.log(table)
+	//九九乘法表
+	for(var row=1;row<table.length;row++){
+		for(var column=1;column<table[row].length;column++)
+			console.log('table['+row+']['+column+'] = '+row*column);
+	}
+
+	</script>
+</body>
+</html>

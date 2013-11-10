@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>取得物件Key&value pairs</title>
+</head>
+<body>
+	<script>
+		var object = {'a':1,'b':2},
+			keys = Object.keys(object);
+
+		for(var i = 0;i<keys.length;i++){
+			var key = keys[i];
+			console.log('object['+key+'] = '+object[key]);
+		}
+		
+	</script>
+</body>
+</html>

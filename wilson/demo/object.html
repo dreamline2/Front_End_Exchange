@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.wrap{
+			background-color: #252525;
+			width: 500px;
+			height: 600px;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			margin-left: -250px;
+			margin-top: -300px;
+			border-radius: 10px;
+		}
+		.mybutton{
+			border: 1px solid #913434;
+			border-bottom: 2px solid #414141;
+			width: 150px;
+			height: 50px;
+			background-color: #B83535;
+			border-radius: 4px;
+			color: #ffffff;
+		}
+		input{
+			height: 24px;
+			padding: 10px;
+			font-size: 16px;
+		}
+		select{
+			height: 50px;
+			width: 200px;
+			padding: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<li>
+				<input type="text" placeholder="請新增欲加入的商品">
+				<button class="add mybutton">Add</button>		
+			</li>
+			<li>
+				<select name="" id="">
+					<option value="">請選擇欲刪除的商品</option>
+				</select>
+				<button class="remove mybutton">Remove</button>		
+			</li>
+		</ul>
+	</div>
+
+
+
+	<script>
+		var initial_product = [];
+		//建立商品組
+		function makeSomeThings(product_length){
+			for(var i=0;i<product_length;i++){
+				initial_product.push('p'+i); 
+				//initial_product['p'+i] = {id:i,price:i};
+			}
+			return initial_product;
+		}
+
+		function printProductObject(){
+
+		}
+		makeSomeThings(10);
+
+		console.log(initial_product)
+		console.log(initial_productp[0])
+	</script>
+</body>
+</html>
