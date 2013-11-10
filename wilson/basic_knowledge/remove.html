@@ -7,12 +7,16 @@
 <body>
 	<script>
 		var a = ['a','b',undefined],
-			b = [];
+			b = [],
+			c = a.filter(function(){return true}),
+			d = a.filter(function(x){return x !== undefined && x!==null});
 		for(var i=0;i<a.length;i++){
 			if(a[i] === undefined) continue;
 			else b.push(a[i]);
 		}
 		console.log(b)
+		console.log(c)
+		console.log(d)
 	</script>
 </body>
 </html>
