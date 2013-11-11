@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 影片置中</title>
+	<style>
+	body{
+		margin:0;
+		padding:0;
+		overflow: hidden;
+	}
+	#wrapper{
+		position: relative;
+		margin:0 auto;
+		width:0;
+	}
+	#key-render{
+		position: absolute;
+		left:-960px;
+	}
+	</style>
+</head>
+<body>
+	
+	<div id="wrapper">
+		<video id="key-render" loop autoplay controls>
+	  		<source src="http://media.blizzard.com/wow/warlords-of-draenor-6y1fz/video/key-render.webm" type="video/webm">
+		</video>
+	</div>
+</body>
+</html>
