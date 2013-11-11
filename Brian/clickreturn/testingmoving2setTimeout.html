@@ -21,6 +21,13 @@
 			<div class="pane" id="pan2">testing2</div>
 		</div>
 	</div>
+
+	<div id="wrapper">
+	<video loop autoplay controls>
+  	
+  	<source src="http://media.blizzard.com/wow/warlords-of-draenor-6y1fz/video/key-render.webm" type="video/webm">
+	</video>
+	</div>
 	
 </body>
 
@@ -56,17 +63,31 @@ $(function(){
 			return false;
 		});
 
-	$(".tab a").eq(0).click(
+	$(".tab a").eq(0).stop().click(
 
 	function (){
-			$(".c1").animate({width:"100%"},400);
-			$(".c1").animate({height:"100%"},500);
-			$("#slider_left").css("z-index","20").animate({left:"0"},500);});
+		
+		setTimeout(function(){
+			$(".c1").animate({width:"100%"});
+			setTimeout(function(){
+				$(".c1").animate({height:"100%"});},500);
+				setTimeout(function(){$("#slider_left").css("z-index","20").animate({left:"0"},400);},1000);
+			},500);
+		});
+			
+			
+			
 
 	$(".tab a").eq(1).click(function(){
+		setTimeout(function(){
+			$(".c1").animate({height:"5px"});
+		
+			setTimeout(function(){
+				$(".c1").animate({width:"0%"});
+			},500)},400);
 
-		$(".c1").animate({height:"5px"},400);
-		$(".c1").animate({width:"0%"},500);
+		
+		
 
 	});
 

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'></script>
+	<title>testingcolorbox</title>
+<style>
+ 	html,body{
+ 		overflow: hidden;
+ 		height:100%;
+ 		width:100%;
+ 		margin:0;
+ 		padding:0;}
+
+ 		#all{
+ 			position:relative;
+ 			top: 0px;
+
+
+ 		}
+
+ 	#wrapper{
+ 		width: 100%;
+ 		height:250px;
+ 		background-color: #FCB;
+ 		border:dashed 5px #ED5674;
+		-moz-border-radius-topleft: 5px;
+		-moz-border-radius-topright:5px;
+		-moz-border-radius-bottomleft:30px;
+		-moz-border-radius-bottomright:30px;
+		-webkit-border-top-left-radius:5px;
+		-webkit-border-top-right-radius:5px;
+		-webkit-border-bottom-left-radius:30px;
+		-webkit-border-bottom-right-radius:30px;
+		border-top-left-radius:5px;
+		border-top-right-radius:5px;
+		border-bottom-left-radius:30px;
+		border-bottom-right-radius:30px;
+ 		position: absolute;}
+
+ 	ul li{
+ 		list-style-type: none;
+ 		display: block;
+ 	}
+
+ 	.btn{ 		
+ 		width:100px;
+ 		height:100px;
+ 		-webkit-border-radius: 50%;
+ 		-moz-border-radius: 50%;
+ 		border-radius: 50%;
+ 		color:white;
+ 		text-align: center;
+ 		line-height: 100px;
+ 		font-size: 25px;
+ 		cursor:pointer;	
+ 		float: left;}
+ 	#wrapper>ul{
+ 		width:200px;
+ 		height: 100px;
+ 		display:block;
+ 		margin:auto;
+ 		position: absolute;
+ 		left: 0;
+ 		right:0;
+ 		bottom: 0;
+ 		top:0;
+ 		
+
+ 	}
+
+ 	.btn1{
+ 		background: #48B9B4;}
+ 	.btn2{
+ 		background-color: #D5BE1E;}
+
+ 	#mask{
+ 		clear: both;
+ 		width:100%;
+ 		height:100%;
+ 		background:#000;
+ 		position: absolute;
+ 		top:0;}
+
+ 	#lightbox{
+ 		background: #fff;
+ 		width:500px;
+ 		height:500px;
+ 		border-radius: 50%;
+ 		top: 50%;
+ 		left:50%;
+ 		margin: -250px 0 0 -250px;
+ 		/*因為定位所以在扣掉寬高的一半才是置中*/
+ 		position: fixed;
+ 		display: none;	}
+
+
+ 		.tc1{
+ 			text-align: center;
+ 			width:100%;
+ 			position: absolute;
+ 			top:120px;
+ 			height:350px;
+ 			background-color: #9FBCF2;
+ 			top:;}
+
+ 		.tc2{
+ 			text-align:center;
+			width: 100%;
+			position:absolute;
+			top:120px;
+			height: 350px;
+			background: #fffa64;
+			display: none;
+			top:50%;
+			left:50%;}	
+
+		#tab1{
+			background:#8B9BDA;
+			border: dotted 2px #fff;
+		}
+
+		#tab2{
+			background:#AB71DF;
+			border: dotted 2px #fff;
+		}
+	#wrapper_2{
+		width:0;
+		margin:0 auto;
+		z-index: -1;
+		position: relative;
+
+		
+	}
+	#key-render{
+		left: -960px;
+
+		position: absolute;
+		
+	
+
+	
+		margin:0 auto;
+	}
+
+
+
+
+	
+</style>
+</head>
+
+<body>
+<div id="all">
+	<div id="wrapper">
+		<ul>
+			<li class="btn1 btn">click1</li>
+			<li class="btn2 btn">click2</li>
+		</ul>
+	</div>
+</div>	
+	<div id="mask"></div>
+
+	<div id="lightbox">
+		<div id="tab1" class="btn">tab1</div>
+		<div id="tab2" class="btn">tab2</div>
+		<div id="tc1">fuckyouboxsizing</div>
+		<div id="tc2">happydesingeveryday</div>
+	</div>
+
+
+	<div id="wrapper_2">
+	<video id="key-render" loop autoplay controls>
+  	<source src="movie.mp4" type="video/mp4">
+  	<source src="http://media.blizzard.com/wow/warlords-of-draenor-6y1fz/video/key-render.webm" type="video/webm">
+  	Your browser does not support the video tag.
+	</video>
+	</div>
+
+	<script>
+	$(function(){
+		$('#mask').fadeTo("slow",0.6).hide();
+		
+		$('.btn1').click(function(){
+			$('#lightbox,#mask').show();
+			
+		});
+
+		$('.btn2').click(function(){
+			$("#mask").css('opacity','1');
+			
+			$('#lightbox,#mask').slideDown(400,function(){
+				$('#mask').fadeTo("slow",0.6);
+			});
+
+		});
+
+		$('#tab1').click(function(){
+			$('#tc1').show();
+			$('#tc2').hide();
+		});
+
+		$('#tab2').click(function(){
+			$('#tc2').show();
+			$('#tc1').hide();
+		});
+
+		$('#mask').click(function(){
+			$('#lightbox,#mask').hide();
+		});
+
+	$("#all").hover(
+		function(){
+			$("#all").stop(true,false).animate({
+				
+				top:"0px"
+			},400);
+		},
+
+		function(){
+			$('#all').stop(true,false).animate({
+				
+				top:"-255px"
+			},500);	}
+
+			);
+
+
+	});
+	</script>
+</body>
+</html>
