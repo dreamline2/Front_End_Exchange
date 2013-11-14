@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>file_upload</title>
+</head>
+<body>
+<form enctype="multipart/form-data" method="post">
+  <input type="file" name="file" id="file" size="20" class="ifile"
+     onchange="
+        this.form.upfile.value=this.value.substr(this.value.lastIndexOf('\\')+1);
+      "	 >
+  <input type="text" name="upfile" size="20" readonly>
+  <input type="button" value="開啟檔案" onclick="this.form.file.click();">
+</form>
+
+<style type="text/css">
+.ifile {position:absolute;opacity:0;filter:alpha(opacity=0);}
+</style>
+
+</body>
+</html>

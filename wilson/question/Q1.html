@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函數名跟執行函數的差別</title>
+</head>
+<body>
+	<script>
+		var string = "Hello world!";
+
+		//定義函數直接呼叫可執行alert
+		function f1(){
+			alert(string+'1');
+		}	
+		f1();
+
+		//定義槽狀函數直接呼叫不執行alert
+		function f2(){
+			function f21(){
+				alert(string+'2');
+			}
+			return f21();
+		}
+		f2();
+		
+		//定義槽狀函數並把f3賦予給d變數直接呼叫可執行alert
+		function f3(){
+			function f31(){
+				alert(string+'3');
+			}
+			return f31;
+		}
+		var d = f3();	
+		d();
+
+		//結論呼叫函數執行要加括號
+	</script>
+</body>
+</html>

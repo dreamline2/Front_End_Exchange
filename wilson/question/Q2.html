@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="click">click</div>
+	<div id="1">click</div>
+	<script>
+		var a = ['a','b','c'];
+		$('#click').click(function(event) {
+			a.pop();
+		});
+		$('#1').click(function(event) {
+			console.log(a)
+		});
+	</script>
+</body>
+</html>
