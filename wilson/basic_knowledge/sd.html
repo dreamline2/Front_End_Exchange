@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+
+
+function formatNumber(str) {  
+    function strformat(str){
+	    if(str.length <= 3){  
+	        return str;  
+	    }else{  
+	        return formatNumber(str.substr(0,str.length-3))+','+str.substr(str.length-3);  
+	    } 
+    } 
+    var cutStr = '';
+    if(str.indexOf('.') != -1){
+    	cutStr = str.substr(str.indexOf('.'),str.length);
+    	str = str.substr(0,str.indexOf('.'));
+    }
+    
+    return strformat(str)+cutStr;
+ 	
+}
+	console.log(formatNumber('123456798.123456'))
+	</script>
+</body>
+</html>

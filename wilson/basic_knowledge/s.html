@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+			var startYear = 2013;
+			var endYear = 2014;
+			var startMonth = 10;
+			var endMonth = 5;
+
+			var initStartMonth = startMonth;
+			var initEndMonth = endMonth
+			var j;
+        	for(var i=startYear;i<endYear+1;i++){
+        		endMonth = (i == endYear)? initEndMonth:12;// 10 = endMonth
+        		startMonth = (i == startYear)? initStartMonth:1; // 10 = startMonth
+        		for( j=startMonth;j<endMonth+1;j++){
+        			console.log('['+i+','+j+']')
+        		}
+        	}
+	</script>
+</body>
+</html>
