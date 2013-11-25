@@ -1,0 +1,18 @@
+var aaa = {
+	"products": {
+		"computer": 
+	    [
+	      {"brand" : "sony",
+	       "price" : "$1000"},
+	      {"brand" : "acer",
+	       "price" : "$400"}
+	    ],
+	    "cell phone":
+	    [
+	      {"brand" : "iphone",
+	        "price" : "$800"},
+	      {"brand" : "htc",
+	       "price" : "$500"}
+	    ] 
+	}
+}
