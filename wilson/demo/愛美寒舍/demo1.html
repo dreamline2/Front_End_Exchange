@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo 愛美寒舍</title>
+	<style>
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: #000000;
+		overflow: hidden;
+	}
+	li{
+		width: 100%;
+		height: 100%;
+    	list-style-type: none;
+    }
+	/*------------------------------------------------------Flip*/
+	#wraper{
+		/*display: none;*/
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -340px;
+		margin-top: -135px;
+		width: 680px;
+		height: 270px;
+	}
+	.figure{ 
+		position: relative; 
+    	width: 150px;
+        height: 250px;
+		margin: 10px;
+		float: left;
+		-webkit-perspective: 1000; 
+		-moz-perspective: 1000;
+	}
+	.card{ 
+		position: absolute; 
+		width: 100%; 
+		height: 100%; 
+		-webkit-transform-style: preserve-3d; 
+		-webkit-transition: -webkit-transform 1s; 
+		-moz-transform-style: preserve-3d; 
+		-moz-transition: -moz-transform 1s;
+		-o-transform-style: preserve-3d; 
+		-o-transition: -moz-transform 1s;
+		-ms-transform-style: preserve-3d; 
+		-ms-transition: -moz-transform 1s;
+	}
+
+	.about:hover,.subject:hover,.purpose:hover,.safe:hover{ 
+    	transform: scale(1.2) rotateY(180deg);
+		-webkit-transform: scale(1.2) rotateY(180deg);
+		-moz-transform: scale(1.2) rotateY(180deg);
+		-o-transform: scale(1.2) rotateY(180deg);
+		-ms-transform: scale(1.2) rotateY(180deg); 
+	}
+	.front{ 
+		background-color:#800040; 
+	}
+	.back{ /*先選轉到背面*/
+		background-color: #333333;
+		-webkit-transform: rotateY(180deg); 
+		-moz-transform: rotateY(180deg);
+	}
+	/*旋轉後背面看不見*/
+    .front,.back{
+		width: 100%;
+		height: 100%;
+		position: absolute; 
+        color: #ffffff;
+        text-align: center;
+        line-height: 250px;
+        cursor: pointer;
+    	-webkit-backface-visibility: hidden;
+    	-moz-backface-visibility: hidden;
+    }
+	.p1{
+		background:url(大廳.JPG) no-repeat;   	
+    	background-size: 100% 100%;
+	}
+	.p2{
+		background:url(Hotel01.jpg) no-repeat;   	
+    	background-size: 100% 100%;
+	}
+	.p3{
+		background:url(20136298583.jpg) no-repeat;   	
+    	background-size: 100% 100%;
+	}
+	.p4{
+		background:url(114201334.jpg) no-repeat;   	
+    	background-size: 100% 100%;
+	}
+    .figure .front{ z-index: 2;}
+    .figure .back{ z-index: 1;}	
+
+	/*------------------------------------------------------Menu*/
+	
+	h1{
+		margin: 0 0 -7px 0;
+		color: #cccccc;
+	}
+	#main{
+		position: absolute;
+		z-index: 999;
+		top: 50%;
+		right: -685px;
+		opacity: 0;
+		display: none;
+	}
+    #slideMenu{
+    	display: block;
+		background-color:  rgba(0,0,0,1);
+		width: 685px;
+    }
+    #slideMenu:after{
+    	content: '';
+    	display: block;
+    	clear: both;
+    }
+
+    .li,.textbox{
+    	opacity: 0.7;
+    	cursor: pointer;
+		background-color: #ffffff;
+		margin: 1px 0px 1px 1px;
+		width: 100px;
+		height: 140px;
+		float: left;
+    }
+    .mask{
+-webkit-mask-image:-moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+-webkit-mask-image:-webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+-webkit-mask-image:-webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+-webkit-mask-image:-o-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+-webkit-mask-image:-ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+-webkit-mask-image:radial-gradient(ellipse at center,  rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */   	
+    }
+    .photo1{
+    	background:url(台北喜來登桃山櫻花祭料理照片.jpg) no-repeat;	
+    	background-size: 100% 100%;
+    }
+    .photo2{
+    	background:url(20130130160639145.jpg) no-repeat;   	
+    	background-size: 100% 100%;
+    }
+    .photo3{
+    	background:url(Hotel01.jpg) no-repeat;
+    	background-size: 100% 100%;
+    }
+    .photo4{
+    	background:url(1102251331b91324ab3e135f76.jpg) no-repeat;
+    	background-size: 100% 100%;
+    }
+    .textbox{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background-color: rgba(0,0,0,0.1);
+		line-height: 20px;
+		color: #ffffff;
+		width: 280px;
+		font-size: 12px;
+		letter-spacing: 2px;
+		text-align: center;
+		padding: 20px 50px 20px 20px;
+    }
+    .lline{
+width: 70%;
+height: 1px;
+background: #ffffff;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -35%;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);	
+    }
+    .rline{
+width: 70%;
+height: 1px;
+background: #ffffff;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -35%;
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+    }
+    .close{
+    	cursor: pointer;
+    	position: absolute;
+		background-color: #807B7B;
+		width: 30px;
+		height: 30px;
+		right: 0;
+    }
+	/*------------------------------------------------------BG*/
+    #bg{
+    	position: absolute;
+    	display: block;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		
+    }
+    .bgImage{
+    	width: 100%;
+		height: 100%;
+		display: none;
+    }	
+	.num1{
+		background: url(39_image_COMP00011039_photo_3.JPG) no-repeat; 
+		background-size: 100% 100%;
+		
+	}
+	.num2{
+		background: url(IM201004160105567745.jpg) no-repeat; 
+		background-size: 100% 100%;
+	}
+	.num3{
+		background: url(2243341146-0.jpg) no-repeat; 
+		background-size: 100% 100%;
+	}
+	.num4{
+		background: url(20120821214215561594-org.jpg) no-repeat; 
+		background-size: 100% 100%;
+	}
+	.num5{
+		background: url(20121130020358246888-org.jpg) no-repeat; 
+		background-size: 100% 100%;
+	}
+	.num6{
+		background: url(19300001069593131437551601875.jpg) no-repeat; 
+		background-size: 100% 100%;
+		display: block;
+	}
+	.num7{
+		background: url(20136294436.jpg) no-repeat; 
+		background-size: 100% 100%;
+	}
+	</style>
+	<script type="text/javascript" src="jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script>
+		$(function(){
+
+			$('.close').hover(function(){
+				$(this).animate({'backgroundColor':'#ff0000'},500,'swing');
+				console.log('123')
+			},function(){
+				$(this).animate({'backgroundColor':'#807B7B'},500,'swing');
+				console.log('456')
+			});
+			
+			/*點翻牌可以淡出並且選單滑出*/
+			$('.about,.subject,.purpose,.safe').click(function(){
+				//console.log('123')
+				$('.num6').fadeOut(800,function(){
+					$('.num7').fadeIn(800);
+				});
+				//$('.num7').fadeIn(2500).siblings().fadeOut(800);
+				$('#wraper').fadeOut(1000,function(){
+					$('#main').css('display','block').animate({'right':'0','opacity':'1'},2000,'swing');
+
+				});
+				
+			});
+			/*點叉叉可以滑出並且翻牌淡入*/
+			$('.close').click(function(){
+				//console.log('123')
+				$('.num7').fadeOut(800,function(){//.num1,.num2,.num3,.num4,.num5,.num6,
+					//console.log('1')
+					$('.num6').fadeIn(800);
+				});
+				
+				$('#main').animate({'right':'-685px','opacity':'0'},2000,'swing',function(){
+					$(this).css('display','none');
+					$('#wraper').fadeIn(1000);
+				});
+			});
+
+			var mover = '';
+			var mout = '';
+
+			$('.li').mouseover(function(){
+
+				$(this).animate({'opacity':'1'},100,'swing').siblings('.li').stop().animate({'opacity':'0.3'},300,'swing');
+
+				mover = $(this)[0].className.slice(5,6);
+				console.log('in='+mover)
+				//console.log($(this)[0].className.slice(5,6))
+
+				switch($(this)[0].className.slice(5,6)){
+					case '1':
+						$('.num7').stop(true).fadeOut(800,function(){
+							$('.num1').fadeIn(1000);
+						});		
+						$('.textbox').text('圖書館').css('line-height','100px');
+					break;
+					case '2':
+						$('.num7').stop(true).fadeOut(800,function(){
+							$('.num2').fadeIn(1000);
+						});	
+						$('.textbox').text('保齡球館').css('line-height','100px');
+					break;
+					case '3':
+						$('.num7').stop(true).fadeOut(800,function(){
+							$('.num3').fadeIn(1000);
+						});	
+						$('.textbox').text('撞球館').css('line-height','100px');
+					break;
+					case '4':
+						$('.num7').stop(true).fadeOut(800,function(){
+							$('.num4').fadeIn(1000);
+						});	
+						$('.textbox').text('體育館').css('line-height','100px');
+					break;
+
+				}
+
+			}).mouseout(function(){
+
+				$('.li').stop(true,true).animate({'opacity':'0.7'},300,'swing');
+
+				switch($(this)[0].className.slice(5,6)){
+					case '1':
+
+						$('.num1').stop(true).fadeOut(1000,function(){
+							$('.num7').fadeIn(1000);
+						});
+	
+					break;
+					case '2':
+						$('.num2').stop(true).fadeOut(1000,function(){
+							$('.num7').fadeIn(1000);
+						});
+					break;
+					case '3':
+						$('.num3').stop(true).fadeOut(1000,function(){
+							$('.num7').fadeIn(1000);
+						});
+					break;
+					case '4':
+						$('.num4').stop(true).fadeOut(1000,function(){
+							$('.num7').fadeIn(1000);
+						});
+					break;
+
+				}
+				$('.textbox').text('王子和公主合力抵抗壞皇后，他們費盡了千辛萬苦，終於打敗了壞皇后，以為從此就能過著幸福快樂美滿的日子，但是錯了，他們還有各自的王子病和公主病要先治療....').css('line-height','20px');
+				mout = $(this)[0].className.slice(5,6);
+				console.log('out='+mout)
+			});
+
+
+	/*		
+			$('.photo1').mouseover(function(){
+console.log('1')
+			});
+			$('.photo2').mouseover(function(){
+console.log('2')
+			});
+			$('.photo3').mouseover(function(){
+console.log('3')
+			});
+			$('.photo4').mouseover(function(){
+console.log('4')
+			});
+*/
+/*
+			$('.liWraper').mouseout(function(){
+				$('.li').animate({'opacity':'0.7'},300,'swing');
+			});
+*/	
+		});
+	</script>
+</head>
+<body>
+	<div id="bg">
+		<div class="bgImage num1"></div>
+		<div class="bgImage num2"></div>
+		<div class="bgImage num3"></div>
+		<div class="bgImage num4"></div>
+		<div class="bgImage num5"></div>
+		<div class="bgImage num6"></div>
+		<div class="bgImage num7"></div>
+	</div>
+
+	<div id="wraper">
+		<div class="figure">
+			<div class="about card">
+				<div class="front p1"></div>
+				<div class="back">關於嘉鎂</div>
+			</div><!--end .box-->
+		</div><!--end .figure-->
+		<div class="figure">
+			<div class="subject card">
+				<div class="front p2"></div>
+				<div class="back">主旨</div>
+			</div><!--end .box-->
+		</div><!--end .figure-->
+		<div class="figure">
+			<div class="purpose card">
+				<div class="front p3"></div>
+				<div class="back">目的</div>
+			</div><!--end .box-->
+		</div><!--end .figure-->
+		<div class="figure">
+			<div class="safe card">
+				<div class="front p4"></div>
+				<div class="back">內容及安全認證</div>
+			</div><!--end .box-->
+		</div><!--end .figure-->		
+	</div>
+
+	<div id="main">
+		<h1>Jiamei-Un</h1>
+		<div id="slideMenu">
+			<div class="liWraper">
+				<div class="photo1 li mask"></div>
+				<div class="photo2 li mask"></div>
+				<div class="photo3 li mask"></div>
+				<div class="photo4 li mask"></div>
+			</div>
+			<div class="textbox">王子和公主合力抵抗壞皇后，他們費盡了千辛萬苦，終於打敗了壞皇后，以為從此就能過著幸福快樂美滿的日子，但是錯了，他們還有各自的王子病和公主病要先治療....</div>
+			<div class="close">
+				<div class="lline"></div>
+				<div class="rline"></div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
