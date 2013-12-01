@@ -6,20 +6,34 @@
 </head>
 <body>
 <script>
-	//for 抓key 作法
-   	var object = {'a':1,'b':2},
-      keys = Object.keys(object);
+    //for 抓key 作法
+    var object = {'a':1,'b':2},
+       keys = Object.keys(object);
 
     for(var i = 0;i<keys.length;i++){
       var key = keys[i];
       console.log('object['+key+'] = '+object[key]);
     }
+
     //for in 作法
     var object = {'a':1,'b':2}, i;
 
     for(i in object){
         console.log('object['+ i +'] = ' + object[i]);
     }
+    
+    /*
+    Terry 補充: 
+        我大概知道為什麼建議最好不要用 for in 的方法取值了,
+        原因是因為, 如果使用for in 的方法取得物件內的值, 
+        它會取得遍布於物件內包含prototype 的屬性 以及 function,
+        這時候, 取得出來的值, 有可能並不是我們想要的, 
+        那通常我們如果使用for in 的話, 需要自己多進行一個"過濾"的動作,
+        ("過濾" 就是指: hasOwnProperty方法, 以及加入條件進行判斷, 如果是物件內有 function也進行過濾)
+        所以在這個地方, 若使用for in的話, 又沒有嚴謹的去過濾這個物件內的值就使用for in迴圈取值,
+        就會有可能造成for in 取出來的值, 並不是自己想要的.
+        所以在這邊補充一下, 小鼠曾經跟我說過避免使用 for in 的原因.
+    */
 </script>
 </body>
 </html>
