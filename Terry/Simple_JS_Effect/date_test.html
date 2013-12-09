@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    var date, today, yesterday, tomorrow, next_week;
+    function getDateTest(val){
+        var y, m, d;
+        date = new Date();
+        date.setDate( date.getDate() + val );
+        y = date.getFullYear()-2000;
+        m = date.getMonth()+1;
+        d = date.getDate();
+        return m + '/' + d + '/' + y ;
+    }
+    today     = getDateTest(0);
+    yesterday = getDateTest(-1);
+    tomorrow  = getDateTest(1);
+    next_week = getDateTest(7);
+    
+    console.log('今天日期是: ', today);
+    console.log('昨天日期是: ', yesterday);
+    console.log('明天日期是: ', tomorrow);
+    console.log('下個禮拜是: ', next_week);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
