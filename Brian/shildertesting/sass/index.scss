@@ -1,0 +1,57 @@
+@import "compass/css3";
+
+$bgcolor:#000;
+@mixin simplebox($bgcolor:#000){
+	background:$bgcolor no-repeat scroll;
+	height:100%;
+	margin:0 auto;
+	min-height: 3000px;
+	width:100%;}
+
+html,body{
+	height:100%;
+	line-height: 20px;}
+
+#wrapper{
+	@include simplebox(#555);
+
+}
+#container{
+	@include simplebox(#855);
+}
+
+#skrollr-body{
+	height:3000px;
+	width:1000px;
+}
+
+
+.p1{
+	background:#ff0;
+	height:150px;
+	width: 150px;
+	position:absolute;
+	top:500px;
+	left: 0px;
+	display: block;}
+
+.p2{
+	background:#456;
+	height:250px;
+	width:250px;
+	position:absolute;
+	top:160px;
+	left:500px;
+	@include border-radius(250px);
+}
+
+
+.p3{
+	background:#456;
+	height:500px;
+	width:500px;
+	position:absolute;
+	top:1100px;
+	left:500px;
+	@include border-radius(500px);
+}
