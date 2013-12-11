@@ -1,0 +1,59 @@
+2013-09-27 10:53:40    create stylesheets/reset.css 
+2013-09-27 10:54:00 overwrite stylesheets/reset.css 
+2013-09-27 10:58:44    create stylesheets/index.css 
+2013-09-27 10:59:40     error sass/index.scss (Line 3: Invalid CSS after "p": expected selector or at-rule, was "{")
+2013-09-27 10:59:40 overwrite stylesheets/index.css 
+2013-09-27 10:59:50     error sass/index.scss (Line 3: Invalid CSS after "p": expected selector or at-rule, was "{")
+2013-09-27 10:59:50 identical stylesheets/index.css 
+2013-09-27 11:00:29     error sass/index.scss (Line 3: Invalid CSS after "p": expected selector or at-rule, was "{")
+2013-09-27 11:00:29 identical stylesheets/index.css 
+2013-09-27 11:00:38     error sass/index.scss (Line 3: Invalid CSS after "p": expected selector or at-rule, was "{")
+2013-09-27 11:00:38 identical stylesheets/index.css 
+2013-09-27 11:01:09     error sass/index.scss (Line 3: Invalid CSS after "... "compass/css3"": expected selector or at-rule, was ""p"{position:ab...")
+2013-09-27 11:01:09 overwrite stylesheets/index.css 
+2013-09-27 11:01:20     error sass/index.scss (Line 3: Invalid CSS after "p": expected selector or at-rule, was "{position:absol...")
+2013-09-27 11:01:20 overwrite stylesheets/index.css 
+2013-09-27 11:01:29     error sass/index.scss (Line 3: Invalid CSS after "p": expected selector or at-rule, was "{position:relat...")
+2013-09-27 11:01:29 overwrite stylesheets/index.css 
+2013-09-27 11:02:09 overwrite stylesheets/index.css 
+2013-09-27 11:02:52 overwrite stylesheets/index.css 
+2013-09-27 11:03:26 overwrite stylesheets/index.css 
+2013-09-27 11:04:48     error sass/index.scss (Line 16: Undefined mixin 'box-radius'.)
+2013-09-27 11:04:48 overwrite stylesheets/index.css 
+2013-09-27 11:05:15     error sass/index.scss (Line 16: Undefined mixin 'box-radius'.)
+2013-09-27 11:05:15 identical stylesheets/index.css 
+2013-09-27 11:05:22     error sass/index.scss (Line 16: Undefined mixin 'box-radius'.)
+2013-09-27 11:05:22 identical stylesheets/index.css 
+2013-09-27 11:06:00 overwrite stylesheets/index.css 
+2013-09-27 11:06:23 overwrite stylesheets/index.css 
+2013-09-27 11:06:37 overwrite stylesheets/index.css 
+2013-09-27 11:06:51 overwrite stylesheets/index.css 
+2013-09-27 11:06:59 overwrite stylesheets/index.css 
+2013-09-27 11:13:42 overwrite stylesheets/index.css 
+2013-09-27 11:13:48 overwrite stylesheets/index.css 
+2013-09-27 11:13:52 overwrite stylesheets/index.css 
+2013-09-27 11:14:04 overwrite stylesheets/index.css 
+2013-09-27 11:14:09 identical stylesheets/index.css 
+2013-09-27 11:16:22 overwrite stylesheets/index.css 
+2013-09-27 11:16:58 overwrite stylesheets/index.css 
+2013-09-27 11:17:05 overwrite stylesheets/index.css 
+2013-09-27 11:22:24 overwrite stylesheets/index.css 
+2013-09-27 11:23:40 overwrite stylesheets/index.css 
+2013-09-27 11:24:41 overwrite stylesheets/index.css 
+2013-09-27 11:25:56     error sass/index.scss (Line 16: Mixin simplebox doesn't have an argument named $bgcolor.)
+2013-09-27 11:25:56 overwrite stylesheets/index.css 
+2013-09-27 11:26:20     error sass/index.scss (Line 16: Mixin simplebox takes 0 arguments but 1 was passed.)
+2013-09-27 11:26:20 overwrite stylesheets/index.css 
+2013-09-27 11:28:39 overwrite stylesheets/index.css 
+2013-09-27 11:29:03 identical stylesheets/index.css 
+2013-09-27 11:30:03 overwrite stylesheets/index.css 
+2013-09-27 11:34:44 overwrite stylesheets/index.css 
+2013-09-27 13:59:44 overwrite stylesheets/index.css 
+2013-09-27 13:59:59 overwrite stylesheets/index.css 
+2013-09-27 14:00:18 overwrite stylesheets/index.css 
+2013-09-27 14:16:03      Copy /js/skrollr.js
+2013-09-27 14:16:03      Copy /stylesheets/ie.css
+2013-09-27 14:16:03      Copy /stylesheets/index.css
+2013-09-27 14:16:03      Copy /stylesheets/print.css
+2013-09-27 14:16:03      Copy /stylesheets/reset.css
+2013-09-27 14:16:03      Copy /stylesheets/screen.css
