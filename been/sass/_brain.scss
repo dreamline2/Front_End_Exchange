@@ -1,0 +1,54 @@
+@mixin transition($property,$duration,$timg){
+-webkit-transition: $property $duration $timg;
+-moz-transition:$property $duration $timg;
+-o-transition: $property $duration $timg;
+-ms-transition: $property $duration $timg;
+transition:$property $duration $timg;};
+
+@mixin transform($transform){
+-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-o-transform: $transform;
+	-ms-transform: $transform;
+	transform: $transform;}
+
+@mixin position($top,$left){
+	top:$top;
+	left:$left;}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($animation){
+-webkit-animation: #{$animation};;
+-moz-animation: #{$animation};;
+-o-animation: #{$animation};;
+animation:#{$animation};;}
+
+
+@mixin size($width,$height,$position){
+	width:$width;
+	height:$height;
+	position:$position;}
+
+@mixin bg-size($img){
+width: image-width($img); 
+height: image-height($img);
+background:url($img) no-repeat top left;}
+
+%div-center{
+	position:absolute;
+	margin:auto;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;}

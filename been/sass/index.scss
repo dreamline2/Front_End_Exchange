@@ -1,0 +1,216 @@
+@import "compass/reset";
+@import "compass";
+@import "_brain";
+
+
+@mixin div-center{
+	position:absolute;
+	margin:auto;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;}
+*{	@include box-sizing(border-box);
+	@include size(100%,100%,relative);}
+
+body{
+	overflow:visible;
+	@include size(100%,100%,relative);
+	background:url(../img/bg.gif) repeat-y top center;
+	header{
+		@include size(100%,86px,fixed);
+		background:#fff;
+		z-index: 49;
+		@include box-shadow(0 2px 5px rgba(black,0.2));
+		.candybar{
+			@include size(100%,9px,absolute);
+			background:url('../img/top_bg.gif') repeat-x top left;}//candybar
+		.nav{
+			@include size(100%,76px,relative);
+			margin:0 auto;
+			
+
+			ul{
+				text-align: center;
+				@include size(988px,76px,relative);
+				margin:0 auto;
+				margin-top:20px;
+				li,a{
+					font-size: 12px;
+					color: #a2bb94;
+					text-decoration: none;
+					font-family: 'Joti One', cursive , Arial, Helvetica, sans-serif, "微軟正黑體", "新細明體", "標楷體";
+					@include size(80px,45px,relative);
+					font-weight:900;
+					display: inline-block;
+					line-height:70px;
+					overflow: hidden;
+					@include text-shadow(0 0 1px 1px #a2bb94);
+				#a1{
+					background: url(../img/nav3.gif);
+					@include size(33px,40px,relative);
+					background-position: 0 43px;}
+				#a1:hover{
+					background-position: 0 -2px;}
+
+				#a2{
+					@include size(48px,40px,relative);
+					background:url(../img/nav1_2.gif);
+					background-position: 0 40px;}
+				#a2:hover{
+					background-position: 0 0px;	}
+				#a3{
+					@include size(74px,40px,relative);					
+					background:url(../img/nav2_2.gif);
+					background-position:0 43px;
+					&:hover{
+						background-position:0 -2px;}}
+				.a4{
+					@include bg-size('../img/facebook2.gif');
+					position:absolute;
+					right:5px;
+					@include background-size(90%);
+					background-position:0px 2px;					
+					@include transition(background-position,0.5s,linear);
+					
+					&:hover{					
+						background-position:0 -42px;
+					}}				
+
+				  }//li					
+				}//ul
+			 }//nav
+			}//header
+
+			#mid-988{
+				@include size(100%,100%,relative);
+				top:0;
+				margin:0 auto;
+				min-width: 988px;
+				.bigstar{
+					@include size(0,0,fixed);
+					top:50%;
+					left:50%;					
+					overflow: hidden;
+
+				.star{@include size(106px,108px,absolute);
+				display: block;
+				background:url('../img/star.png') no-repeat top left;
+				@include animation('cssAnimation 20s infinite linear');}
+				
+
+				#b1{@include position(20%,80%);}
+				#b2{@include position(12%,20%);}
+				#b3{@include position(58%,82%);}
+				#b4{@include position(80%,10%);}
+				#b5{@include position(28%,2%);
+					@include size(106px,108px,absolute);
+					img{
+						@include size(100%,100%,relative);
+						}}
+				}
+	
+				.bg_1{
+					@include size(100%,100%,relative);
+					overflow: hidden;
+					border-bottom:5px dotted #fff;
+
+					.role{
+						@include size(0,0,absolute);
+						background:url(../img/role.jpg) no-repeat center;
+						@include background-size(cover);
+						@include border-radius(50%);
+						border:10px solid #fff;
+						margin:auto;
+						top:0;
+						right:0;
+						left:0;
+						bottom:0;
+						@include box-shadow(-2px -5px 0 2px rgba(#888,0.5));}//role
+					.logo{						
+						@include size(0,0,absolute);
+						background:url('../img/logo1.png') no-repeat top center;
+						margin: auto;
+						top:20%;
+						right:0;
+						left:0;
+						bottom:0;
+						}
+					.top{
+						top:250px;
+						left: -50px;}					
+
+					
+						.role2{
+							@include div-center;
+							@include bg-size('../img/role2.png');
+							z-index:3;
+							top:-500%;
+						}
+
+						.skateboard{
+							@include div-center;
+							top:-9999px;
+							left:-9999px;
+							@include bg-size('../img/skateboard.png');
+							z-index:2;}		
+
+					
+						h3{
+						text-align: center;
+						background-image:none;
+						color:#fff;
+						font-weight:800;
+						font-size:80px;
+						top:20%;
+						font-family: 'Joti One', cursive , Arial, Helvetica, sans-serif, "微軟正黑體", "新細明體", "標楷體";
+						@include text-shadow(1px 1px 2px rgba(black,0.8),1px 1px 6px rgba(black,0.2));}
+						
+						.bg_people{
+						top:32%;
+						@extend %div-center;
+
+						.people{
+							display: inline-block;
+							@include size(250px,250px,absolute);
+							@include border-radius(50%);
+							margin-left: 5px;
+								img{
+								@include border-radius(50%);
+								@include size(100%,100%,relative);
+								@include background-size(cover);}	
+	
+							}//people
+						}//bg_people
+
+
+					}//bg_1
+					
+			}
+
+			#scroll_top{
+				right:5px;
+				bottom:-221px;
+				@include size(238px,221px,fixed);
+				z-index:99;
+				cursor:pointer;}//兔兔
+
+
+
+
+		}//body
+
+
+a,img{outline: none; /* for Firefox / hlbr:expression(this.onFocus=this.blur()); / for IE */}
+
+input,textarea{outline:none} /*消除chrome黃色框*/
+ textarea{resize:none} /*不要縮放*/
+
+@include keyframes(cssAnimation){
+	0%{
+	   @include transform(rotate(360deg));}
+
+	100%{
+		@include transform(rotate(0deg));} 
+	}
+

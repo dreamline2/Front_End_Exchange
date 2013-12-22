@@ -1,0 +1,475 @@
+/* line 17, C:/Users/PC/Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Users/PC/Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Users/PC/Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Users/PC/Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Users/PC/Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Users/PC/Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Users/PC/Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Users/PC/Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Users/PC/Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 48, ../sass/_brain.scss */
+body #mid-988 .bg_1 .bg_people {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* line 13, ../sass/index.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 16, ../sass/index.scss */
+body {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../img/bg.gif) repeat-y top center;
+}
+/* line 20, ../sass/index.scss */
+body header {
+  width: 100%;
+  height: 86px;
+  position: fixed;
+  background: #fff;
+  z-index: 49;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* line 25, ../sass/index.scss */
+body header .candybar {
+  width: 100%;
+  height: 9px;
+  position: absolute;
+  background: url("../img/top_bg.gif") repeat-x top left;
+}
+/* line 28, ../sass/index.scss */
+body header .nav {
+  width: 100%;
+  height: 76px;
+  position: relative;
+  margin: 0 auto;
+}
+/* line 33, ../sass/index.scss */
+body header .nav ul {
+  text-align: center;
+  width: 988px;
+  height: 76px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+/* line 38, ../sass/index.scss */
+body header .nav ul li, body header .nav ul a {
+  font-size: 12px;
+  color: #a2bb94;
+  text-decoration: none;
+  font-family: 'Joti One', cursive , Arial, Helvetica, sans-serif, "微軟正黑體", "新細明體", "標楷體";
+  width: 80px;
+  height: 45px;
+  position: relative;
+  font-weight: 900;
+  display: inline-block;
+  line-height: 70px;
+  overflow: hidden;
+  text-shadow: 0 0 1px #a2bb94, 0 0 1px 1px #a2bb94;
+  text-shadow: 0 0 1px 1px #a2bb94, 0 0 1px 1px #a2bb94;
+}
+/* line 49, ../sass/index.scss */
+body header .nav ul li #a1, body header .nav ul a #a1 {
+  background: url(../img/nav3.gif);
+  width: 33px;
+  height: 40px;
+  position: relative;
+  background-position: 0 43px;
+}
+/* line 53, ../sass/index.scss */
+body header .nav ul li #a1:hover, body header .nav ul a #a1:hover {
+  background-position: 0 -2px;
+}
+/* line 56, ../sass/index.scss */
+body header .nav ul li #a2, body header .nav ul a #a2 {
+  width: 48px;
+  height: 40px;
+  position: relative;
+  background: url(../img/nav1_2.gif);
+  background-position: 0 40px;
+}
+/* line 60, ../sass/index.scss */
+body header .nav ul li #a2:hover, body header .nav ul a #a2:hover {
+  background-position: 0 0px;
+}
+/* line 62, ../sass/index.scss */
+body header .nav ul li #a3, body header .nav ul a #a3 {
+  width: 74px;
+  height: 40px;
+  position: relative;
+  background: url(../img/nav2_2.gif);
+  background-position: 0 43px;
+}
+/* line 66, ../sass/index.scss */
+body header .nav ul li #a3:hover, body header .nav ul a #a3:hover {
+  background-position: 0 -2px;
+}
+/* line 68, ../sass/index.scss */
+body header .nav ul li .a4, body header .nav ul a .a4 {
+  width: 50px;
+  height: 94px;
+  background: url("../img/facebook2.gif") no-repeat top left;
+  position: absolute;
+  right: 5px;
+  -webkit-background-size: 90%;
+  -moz-background-size: 90%;
+  -o-background-size: 90%;
+  background-size: 90%;
+  background-position: 0px 2px;
+  -webkit-transition: background-position 0.5s linear;
+  -moz-transition: background-position 0.5s linear;
+  -o-transition: background-position 0.5s linear;
+  -ms-transition: background-position 0.5s linear;
+  transition: background-position 0.5s linear;
+}
+/* line 76, ../sass/index.scss */
+body header .nav ul li .a4:hover, body header .nav ul a .a4:hover {
+  background-position: 0 -42px;
+}
+/* line 85, ../sass/index.scss */
+body #mid-988 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  min-width: 988px;
+}
+/* line 90, ../sass/index.scss */
+body #mid-988 .bigstar {
+  width: 0;
+  height: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+}
+/* line 96, ../sass/index.scss */
+body #mid-988 .bigstar .star {
+  width: 106px;
+  height: 108px;
+  position: absolute;
+  display: block;
+  background: url("../img/star.png") no-repeat top left;
+  -webkit-animation: cssAnimation 20s infinite linear;
+  -moz-animation: cssAnimation 20s infinite linear;
+  -o-animation: cssAnimation 20s infinite linear;
+  animation: cssAnimation 20s infinite linear;
+}
+/* line 102, ../sass/index.scss */
+body #mid-988 .bigstar #b1 {
+  top: 20%;
+  left: 80%;
+}
+/* line 103, ../sass/index.scss */
+body #mid-988 .bigstar #b2 {
+  top: 12%;
+  left: 20%;
+}
+/* line 104, ../sass/index.scss */
+body #mid-988 .bigstar #b3 {
+  top: 58%;
+  left: 82%;
+}
+/* line 105, ../sass/index.scss */
+body #mid-988 .bigstar #b4 {
+  top: 80%;
+  left: 10%;
+}
+/* line 106, ../sass/index.scss */
+body #mid-988 .bigstar #b5 {
+  top: 28%;
+  left: 2%;
+  width: 106px;
+  height: 108px;
+  position: absolute;
+}
+/* line 108, ../sass/index.scss */
+body #mid-988 .bigstar #b5 img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 113, ../sass/index.scss */
+body #mid-988 .bg_1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px dotted #fff;
+}
+/* line 118, ../sass/index.scss */
+body #mid-988 .bg_1 .role {
+  width: 0;
+  height: 0;
+  position: absolute;
+  background: url(../img/role.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-box-shadow: -2px -5px 0 2px rgba(136, 136, 136, 0.5);
+  -moz-box-shadow: -2px -5px 0 2px rgba(136, 136, 136, 0.5);
+  box-shadow: -2px -5px 0 2px rgba(136, 136, 136, 0.5);
+}
+/* line 130, ../sass/index.scss */
+body #mid-988 .bg_1 .logo {
+  width: 0;
+  height: 0;
+  position: absolute;
+  background: url("../img/logo1.png") no-repeat top center;
+  margin: auto;
+  top: 20%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+/* line 139, ../sass/index.scss */
+body #mid-988 .bg_1 .top {
+  top: 250px;
+  left: -50px;
+}
+/* line 144, ../sass/index.scss */
+body #mid-988 .bg_1 .role2 {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 804px;
+  height: 659px;
+  background: url("../img/role2.png") no-repeat top left;
+  z-index: 3;
+  top: -500%;
+}
+/* line 151, ../sass/index.scss */
+body #mid-988 .bg_1 .skateboard {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: -9999px;
+  left: -9999px;
+  width: 782px;
+  height: 562px;
+  background: url("../img/skateboard.png") no-repeat top left;
+  z-index: 2;
+}
+/* line 159, ../sass/index.scss */
+body #mid-988 .bg_1 h3 {
+  text-align: center;
+  background-image: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 80px;
+  top: 20%;
+  font-family: 'Joti One', cursive , Arial, Helvetica, sans-serif, "微軟正黑體", "新細明體", "標楷體";
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 1px 1px 6px rgba(0, 0, 0, 0.2);
+}
+/* line 169, ../sass/index.scss */
+body #mid-988 .bg_1 .bg_people {
+  top: 32%;
+}
+/* line 173, ../sass/index.scss */
+body #mid-988 .bg_1 .bg_people .people {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+/* line 178, ../sass/index.scss */
+body #mid-988 .bg_1 .bg_people .people img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 191, ../sass/index.scss */
+body #scroll_top {
+  right: 5px;
+  bottom: -221px;
+  width: 238px;
+  height: 221px;
+  position: fixed;
+  z-index: 99;
+  cursor: pointer;
+}
+
+/* line 204, ../sass/index.scss */
+a, img {
+  outline: none;
+  /* for Firefox / hlbr:expression(this.onFocus=this.blur()); / for IE */
+}
+
+/* line 206, ../sass/index.scss */
+input, textarea {
+  outline: none;
+}
+
+/*消除chrome黃色框*/
+/* line 207, ../sass/index.scss */
+textarea {
+  resize: none;
+}
+
+/*不要縮放*/
+@-webkit-keyframes cssAnimation {
+  /* line 210, ../sass/index.scss */
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  /* line 213, ../sass/index.scss */
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes cssAnimation {
+  /* line 210, ../sass/index.scss */
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  /* line 213, ../sass/index.scss */
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes cssAnimation {
+  /* line 210, ../sass/index.scss */
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  /* line 213, ../sass/index.scss */
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
